@@ -1,0 +1,50 @@
+# ---- secrets ----
+.env
+.env.*
+!.env.example
+*.bak
+
+# ---- python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# ---- virtual environments ----
+.venv/
+venv/
+env/
+myenv/
+*/.venv/
+**/.venv/
+**/myenv/
+
+# ---- runtime artifacts ----
+*.log
+app.log
+*.db
+*.sqlite3
+uploaded_*.png
+
+# ---- os / editor ----
+.DS_Store
+.qodo/
+.vscode/
+.idea/
+
+# ---- large local data / indexes ----
+# vector stores are rebuilt from source docs
+chroma_db/
+guideToAddmissinVector/
+guideToAddmissinVector1/
+guideToAddmissinVectorheader/
+*.pkl
+
+# ---- chroma / vector store binaries (regenerable from source docs) ----
+*.bin
+chroma.sqlite3
+index_metadata.pickle
+*.parquet
+
+# ---- third-party repo cloned for reference (has its own .git) ----
+multiligual chatbot analyticsVidhya/RAG-based-Legal-Assistant/

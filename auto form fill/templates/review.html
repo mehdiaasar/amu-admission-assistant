@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Review Profile | Admission Assistant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 p-8">
+    <div class="max-w-4xl mx-auto bg-white shadow-xl rounded-lg p-8">
+        <h1 class="text-3xl font-bold text-center text-indigo-600 mb-6">Review Your Profile</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {% for key, value in profile.items() %}
+            <div class="p-4 border rounded bg-gray-100">
+                <p class="text-sm font-medium text-gray-600 capitalize">{{ key.replace('_', ' ') }}</p>
+                <p class="text-lg font-semibold">{{ value }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

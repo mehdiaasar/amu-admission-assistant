@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "RAG Integration Extension",
+  "version": "1.0",
+  "description": "Chrome extension to interact with RAG FastAPI backend",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:8000/*"
+  ],
+  "action": {
+    "default_title": "RAG Integration",
+    "default_icon": {
+      "16": "icons/Augmentation.png",
+      "48": "icons/Rag Cloth.png",
+      "128": "icons/Updating file on computer.png"
+    },
+    "default_popup": "sidebar.html"
+  }
+}

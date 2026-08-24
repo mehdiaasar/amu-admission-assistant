@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fill Profile | Admission Assistant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 p-6">
+    <div class="max-w-4xl mx-auto bg-white shadow-xl rounded-lg p-8">
+        <h1 class="text-3xl font-bold text-center text-indigo-600 mb-6">Fill Your Profile</h1>
+
+        <form method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+                <label class="block mb-1 font-medium">Registered Email</label>
+                <input type="email" name="registered_email" class="w-full border border-gray-300 p-3 rounded" required>
+            </div>
+
+            <div>
+                <label class="block mb-1 font-medium">Alternate Email</label>
+                <input type="email" name="alt_email" class="w-full border border-gray-300 p-3 rounded">
+            </div>
+
+            {% for field, value in extracted.items() %}
+            <div>
+                <label class="block mb-1 font-medium capitalize">{{ field.replace("_", " ") }}</label>
+                <input type="text" name="{{ field }}" value="{{ value }}" class="w-full border border-gray-300 p-3 rounded">
+            </div>
+            {% endfor %}
+
+            <div>
+                <label class="block mb-1 font-medium">Religion</label>
+                <input type="text" name="religion" class="w-full border border-gray-300 p-3 rounded">
+            </div>
+
+            <div>
+                <label class="block mb-1 font-medium">Hostel Accommodation (Yes/No)</label>
+                <input type="text" name="hostel_accommodation" class="w-full border border-gray-300 p-3 rounded">
+            </div>
+
+            <div class="col-span-1 md:col-span-2 text-center">
+                <button type="submit" 
+                        class="mt-6 bg-indigo-600 text-white py-2 px-8 rounded hover:bg-indigo-700 transition">
+                    Submit Profile
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
